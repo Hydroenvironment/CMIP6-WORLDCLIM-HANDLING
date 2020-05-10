@@ -82,3 +82,6 @@ names(SSP126_PR_stack) <- month.abb
 
 levelplot(SSP126_PR_stack,main="BCC-CSM2-MR MODEL-MONTHLY PRECIPITATION (mm)",
           margin =FALSE, xlab="longitude", ylab="latitude", col.regions=heat.colors(10))
+
+#Este código tiene propósitos simples de visualización, es tu tarea mejorar el mismo
+# para usarlo en tus proyectos e investigaciones, suerte!
