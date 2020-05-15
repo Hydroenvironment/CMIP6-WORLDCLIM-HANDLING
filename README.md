@@ -4,6 +4,10 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 # CMIP6-WORLDCLIM-HANDLING
+
+# CMIP6 GCM DATA TREATMENT
+<a href="http://csaybar.github.io/rgee"><img src="https://i0.wp.com/ukesm.ac.uk/wp-content/uploads/2018/07/cmip6_logo-01_W4EisQO.png?fit=702%2C182&ssl=1" align="left" hspace="10" vspace="6" width="12%"></a>
+
 DAILY AND MONTHLY DATA TREATMENT FROM GENERAL CIRCULATION MODELS (GCM`s) BY CMIP6 PHASE
 
 The 2013 IPCC fifth assessment report (AR5) featured climate models from CMIP5, while the upcoming 2021 IPCC sixth assessment report (AR6) will feature new state-of-the-art CMIP6 models.
