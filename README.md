@@ -7,8 +7,8 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 # CMIP6-WORLDCLIM-HANDLING
 <img src="https://i0.wp.com/ukesm.ac.uk/wp-content/uploads/2018/07/cmip6_logo-01_W4EisQO.png?fit=702%2C182&ssl=1" align="left" hspace="100" vspace="6" width="30%"></a>
 
-🌏 DAILY AND MONTHLY DATA TREATMENT FROM GENERAL CIRCULATION MODELS (GCM`s) BY CMIP6 PHASE
-</a>
+🌏 DAILY AND MONTHLY DATA TREATMENT FROM GENERAL CIRCULATION MODELS (GCMs) BY CMIP6 PHASE
+
 ✅The 2013 IPCC fifth assessment report (AR5) featured climate models from CMIP5, while the upcoming 2021 IPCC sixth assessment report (AR6) will feature new state-of-the-art CMIP6 models.
 
 ✅CMIP6 will consist of the “runs” from around 100 distinct climate models being produced across 49 different modelling groups. While the results from only around 40 CMIP6 models have been published so far, it is already evident that a number of them have a notably higher climate sensitivity than models in CMIP5
