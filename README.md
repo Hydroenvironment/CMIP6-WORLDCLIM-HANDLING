@@ -6,10 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![CMIP6-WORLDCLIM-HANDLING badge](https://img.shields.io/badge/overviewR-ready%20to%20use-brightgreen)](https://github.com/Hydroenvironment/CMIP6-WORLDCLIM-HANDLING/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 # CMIP6-WORLDCLIM-HANDLING
-<p align="center">
-  <img src="https://i0.wp.com/ukesm.ac.uk/wp-content/uploads/2018/07/cmip6_logo-01_W4EisQO.png?fit=702%2C182&ssl=1" width="350" title="hover text">
-  <img src="https://i0.wp.com/ukesm.ac.uk/wp-content/uploads/2018/07/cmip6_logo-01_W4EisQO.png?fit=702%2C182&ssl=1" width="350" alt="accessibility text">
-</p>
+![Screenshot](cmip6logo.png)
 
 🌏 DAILY AND MONTHLY DATA TREATMENT FROM GENERAL CIRCULATION MODELS (GCMs) BY CMIP6 PHASE
 
