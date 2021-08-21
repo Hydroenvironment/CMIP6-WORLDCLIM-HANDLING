@@ -1,0 +1,170 @@
+################################################################################
+#CMIP6 CLIMATE DATA EXTRACTION BY MULTI-POLYGON SHAPEFILE                      #
+#USING WORLDCLIM DATASET - V1.0                                                #
+################################################################################
+
+#Author: Julio Montenegro Gambini, P.E. ASCE, M.Sc.,
+#PhD fellow - Technische Universiteit Delft (TU Delft), Netherlands.
+
+#Current version: 1.0
+
+
+#The data available here are CMIP6 downscaled future climate projections. 
+#The downscaling and calibration (bias correction) was done with WorldClim 
+#v2.1 as baseline climate.
+#More info: https://www.worldclim.org/data/cmip6/cmip6climate.html
+
+#Libraries and input data ======================================================
+library(raster)
+library(xlsx)
+library(plyr)
+library(dplyr)
+
+setwd("D:/RESEARCH/CMIP6 ASESSMENT PERU/CMIP6-20210819T204710Z-001/CMIP6/test")
+rasterfiles <- list.files("D:/RESEARCH/CMIP6 ASESSMENT PERU/CMIP6-20210819T204710Z-001/CMIP6/test", "*.tif", full.names = TRUE)
+nc = stack(rasterfiles)
+pt = shapefile("D:/RESEARCH/CMIP6 ASESSMENT PERU/GIS/SHAPEFILE/RegPeru_geoWGS84.shp")
+
+#Data arrangement ==============================================================
+#SSP 126
+ext_126_21_40=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_126_21_40)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_126_41_60=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_126_41_60)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_126_61_80=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_126_61_80)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_126_81_100=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_126_81_100)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+#SSP 245
+ext_245_21_40=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_245_21_40)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_245_41_60=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_245_41_60)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_245_61_80=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_245_61_80)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_245_81_100=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_245_81_100)<-c("Region","January","February","March","April","May","June","July","August"
+                            ,"September","October","November","December")
+#SSP 370
+ext_370_21_40=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_370_21_40)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_370_41_60=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_370_41_60)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_370_61_80=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_370_61_80)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_370_81_100=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_370_81_100)<-c("Region","January","February","March","April","May","June","July","August"
+                            ,"September","October","November","December")
+#SSP 585
+ext_585_21_40=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_585_21_40)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_585_41_60=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_585_41_60)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_585_61_80=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_585_61_80)<-c("Region","January","February","March","April","May","June","July","August"
+                           ,"September","October","November","December")
+ext_585_81_100=data.frame(pt$NOMBDEP,matrix(NA, nrow = length(pt@polygons), ncol = 12))
+colnames(ext_585_81_100)<-c("Region","January","February","March","April","May","June","July","August"
+                            ,"September","October","November","December")
+#SSP 126 =======================================================================
+for (i in seq(1,12, by=1)){
+  ext_126_21_40[,i+1]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(13,24, by=1)){
+  ext_126_41_60[,i-11]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(25,36, by=1)){
+  ext_126_61_80[,i-23]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(37,48, by=1)){
+  ext_126_81_100[,i-35]=extract(nc[[i]], pt,fun=mean)
+}
+#SSP 245 =======================================================================
+for (i in seq(49,60, by=1)){
+  ext_245_21_40[,i-47]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(61,72, by=1)){
+  ext_245_41_60[,i-59]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(73,84, by=1)){
+  ext_245_61_80[,i-71]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(85,96, by=1)){
+  ext_245_81_100[,i-83]=extract(nc[[i]], pt,fun=mean)
+}
+#SSP 370 ====================================================================
+for (i in seq(97,108, by=1)){
+  ext_370_21_40[,i-95]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(109,120, by=1)){
+  ext_370_41_60[,i-107]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(121,132, by=1)){
+  ext_370_61_80[,i-119]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(133,144, by=1)){
+  ext_370_81_100[,i-131]=extract(nc[[i]], pt,fun=mean)
+}
+#SSP 585 ====================================================================
+for (i in seq(145,156, by=1)){
+  ext_585_21_40[,i-143]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(157,168, by=1)){
+  ext_585_41_60[,i-155]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(169,180, by=1)){
+  ext_585_61_80[,i-167]=extract(nc[[i]], pt,fun=mean)
+}
+for (i in seq(181,192, by=1)){
+  ext_585_81_100[,i-179]=extract(nc[[i]], pt,fun=mean)
+}
+
+#Saving data ===================================================================
+
+write.xlsx(ext_126_21_40, file="ssp126.xlsx", sheetName = "2021-2040", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_126_41_60, file="ssp126.xlsx", sheetName = "2041-2060", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_126_61_80, file="ssp126.xlsx", sheetName = "2061-2080", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_126_81_100, file="ssp126.xlsx", sheetName = "2081-2100", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+
+write.xlsx(ext_245_21_40, file="ssp245.xlsx", sheetName = "2021-2040", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_245_41_60, file="ssp245.xlsx", sheetName = "2041-2060", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_245_61_80, file="ssp245.xlsx", sheetName = "2061-2080", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_245_81_100, file="ssp245.xlsx", sheetName = "2081-2100", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+
+write.xlsx(ext_370_21_40, file="ssp370.xlsx", sheetName = "2021-2040", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_370_41_60, file="ssp370.xlsx", sheetName = "2041-2060", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_370_61_80, file="ssp370.xlsx", sheetName = "2061-2080", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_370_81_100, file="ssp370.xlsx", sheetName = "2081-2100", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+
+write.xlsx(ext_585_21_40, file="ssp585.xlsx", sheetName = "2021-2040", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_585_41_60, file="ssp585.xlsx", sheetName = "2041-2060", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_585_61_80, file="ssp585.xlsx", sheetName = "2061-2080", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
+write.xlsx(ext_585_81_100, file="ssp585.xlsx", sheetName = "2081-2100", 
+           col.names = TRUE, row.names = TRUE, append = TRUE)
