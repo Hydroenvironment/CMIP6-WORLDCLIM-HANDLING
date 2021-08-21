@@ -5,7 +5,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
 # CMIP6-WORLDCLIM-HANDLING
-<img src="![image](https://esgf-node.llnl.gov/site_media/logos/180712_WCRP-CMIP6_540x100px_72dpi.png)" align="center" hspace="1" vspace="1" width="30%"></a>
+<img src="![image](https://esgf-node.llnl.gov/site_media/logos/180712_WCRP-CMIP6_540x100px_72dpi.png)" align="center" hspace="10" vspace="6" width="30%"></a>
 
 🌏 DAILY AND MONTHLY DATA TREATMENT FROM GENERAL CIRCULATION MODELS (GCMs) BY CMIP6 PHASE
 
