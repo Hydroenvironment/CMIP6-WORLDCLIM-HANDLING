@@ -2,7 +2,7 @@
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/license-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 # CMIP6-WORLDCLIM-HANDLING
 <img src="![image](https://esgf-node.llnl.gov/site_media/logos/180712_WCRP-CMIP6_540x100px_72dpi.png)" align="center" hspace="10" vspace="6" width="30%"></a>
