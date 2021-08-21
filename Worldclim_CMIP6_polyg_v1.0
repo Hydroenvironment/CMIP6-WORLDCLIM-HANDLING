@@ -8,11 +8,18 @@
 
 #Current version: 1.0
 
-
 #The data available here are CMIP6 downscaled future climate projections. 
 #The downscaling and calibration (bias correction) was done with WorldClim 
 #v2.1 as baseline climate.
 #More info: https://www.worldclim.org/data/cmip6/cmip6climate.html
+
+#MAIN INDICATIONS
+#1.GEOTIFF or NetCDF the data must be classified according to each GCM or RCM model, 
+#and included in a folder for each of the models. 
+#2.It is recommended that each folder has the name of each model.
+#3.The shapefile must consist of polygons and be geotagged according to the WGS84 ellipsoid 
+#with geographic coordinates (latitude and longitude).
+#4.The shapefile shall have the names of each polygon included in the polygon attributes.
 
 #Libraries and input data ======================================================
 library(raster)
