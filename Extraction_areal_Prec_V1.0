@@ -821,8 +821,6 @@ PP_b<-full_join(PP_370,PP_585)
 PP_CanESM5<-full_join(PP_a,PP_b)
 rownames(PP_CanESM5)<-c("ssp126","ssp245","ssp370","ssp585")
 
-
-
 #CNRM-CM6-1====================================================================
 #SSP126
 setwd(wd_anom_anual)
@@ -885,7 +883,6 @@ PP_b<-full_join(PP_370,PP_585)
 PP_CNRM_CM6_1<-full_join(PP_a,PP_b)
 rownames(PP_CNRM_CM6_1)<-c("ssp126","ssp245","ssp370","ssp585")
 
-
 #CNRM-ESM2-1====================================================================
 #SSP126
 setwd(wd_anom_anual)
@@ -947,7 +944,6 @@ PP_a<-full_join(PP_126,PP_245)
 PP_b<-full_join(PP_370,PP_585)
 PP_CNRM_ESM2_1<-full_join(PP_a,PP_b)
 rownames(PP_CNRM_ESM2_1)<-c("ssp126","ssp245","ssp370","ssp585")
-
 
 #GFDL-ESM4====================================================================
 #SSP126
@@ -1263,7 +1259,6 @@ PP_b<-full_join(PP_370,PP_585)
 PP_MRI_ESM2_0<-full_join(PP_a,PP_b)
 rownames(PP_MRI_ESM2_0)<-c("ssp126","ssp245","ssp370","ssp585")
 
-
 #Exporting annual anomalies in xlsx file=========================================================
 setwd(wd_anom_anual)
 write.xlsx(PP_BCC_CSM2_MR, file="Annual_anomaly_Peru_CMIP6.xlsx", sheetName = "BCC-CSM2-MR", 
@@ -1284,7 +1279,6 @@ write.xlsx(PP_MIROC_ES2L, file="Annual_anomaly_Peru_CMIP6.xlsx", sheetName = "MI
            col.names = TRUE, row.names = TRUE, append = TRUE)
 write.xlsx(PP_MRI_ESM2_0, file="Annual_anomaly_Peru_CMIP6.xlsx", sheetName = "MRI-ESM2-0", 
            col.names = TRUE, row.names = TRUE, append = TRUE)
-
 
 ################################################################################
 #SEASONAL ANOMALIES ####################################################### #### 
@@ -1413,8 +1407,6 @@ PP_a<-full_join(PP_126,PP_245)
 PP_b<-full_join(PP_370,PP_585)
 PP_CanESM5<-full_join(PP_a,PP_b)
 rownames(PP_CanESM5)<-c("ssp126","ssp245","ssp370","ssp585")
-
-
 
 #CNRM-CM6-1====================================================================
 #SSP126
@@ -2068,7 +2060,6 @@ PP_b<-full_join(PP_370,PP_585)
 PP_CNRM_CM6_1<-full_join(PP_a,PP_b)
 rownames(PP_CNRM_CM6_1)<-c("ssp126","ssp245","ssp370","ssp585")
 
-
 #CNRM-ESM2-1====================================================================
 #SSP126
 setwd(wd_anom_seasonal)
@@ -2596,8 +2587,6 @@ PP_b<-full_join(PP_370,PP_585)
 PP_CanESM5<-full_join(PP_a,PP_b)
 rownames(PP_CanESM5)<-c("ssp126","ssp245","ssp370","ssp585")
 
-
-
 #CNRM-CM6-1====================================================================
 #SSP126
 setwd(wd_anom_seasonal)
@@ -2722,7 +2711,6 @@ PP_a<-full_join(PP_126,PP_245)
 PP_b<-full_join(PP_370,PP_585)
 PP_CNRM_ESM2_1<-full_join(PP_a,PP_b)
 rownames(PP_CNRM_ESM2_1)<-c("ssp126","ssp245","ssp370","ssp585")
-
 
 #GFDL-ESM4====================================================================
 #SSP126
@@ -2849,7 +2837,6 @@ PP_b<-full_join(PP_370,PP_585)
 PP_IPSL_CM6A_LR<-full_join(PP_a,PP_b)
 rownames(PP_IPSL_CM6A_LR)<-c("ssp126","ssp245","ssp370","ssp585")
 
-
 #MIROC6====================================================================
 #SSP126
 setwd(wd_anom_seasonal)
@@ -2911,7 +2898,6 @@ PP_a<-full_join(PP_126,PP_245)
 PP_b<-full_join(PP_370,PP_585)
 PP_MIROC6<-full_join(PP_a,PP_b)
 rownames(PP_MIROC6)<-c("ssp126","ssp245","ssp370","ssp585")
-
 
 #MIROC_ES2L====================================================================
 #SSP126
@@ -3037,7 +3023,6 @@ PP_a<-full_join(PP_126,PP_245)
 PP_b<-full_join(PP_370,PP_585)
 PP_MRI_ESM2_0<-full_join(PP_a,PP_b)
 rownames(PP_MRI_ESM2_0)<-c("ssp126","ssp245","ssp370","ssp585")
-
 
 #Exporting as xlsx file=========================================================
 setwd(wd_anom_seasonal)
@@ -3123,7 +3108,6 @@ PP_b<-full_join(PP_370,PP_585)
 PP_BCC_CSM2_MR<-full_join(PP_a,PP_b)
 rownames(PP_BCC_CSM2_MR)<-c("ssp126","ssp245","ssp370","ssp585")
 
-
 #CanESM5====================================================================
 #SSP126
 setwd(wd_anom_seasonal)
@@ -3185,7 +3169,6 @@ PP_a<-full_join(PP_126,PP_245)
 PP_b<-full_join(PP_370,PP_585)
 PP_CanESM5<-full_join(PP_a,PP_b)
 rownames(PP_CanESM5)<-c("ssp126","ssp245","ssp370","ssp585")
-
 
 
 #CNRM-CM6-1====================================================================
@@ -3627,7 +3610,6 @@ PP_a<-full_join(PP_126,PP_245)
 PP_b<-full_join(PP_370,PP_585)
 PP_MRI_ESM2_0<-full_join(PP_a,PP_b)
 rownames(PP_MRI_ESM2_0)<-c("ssp126","ssp245","ssp370","ssp585")
-
 
 #Exporting as xlsx file=========================================================
 setwd(wd_anom_seasonal)
