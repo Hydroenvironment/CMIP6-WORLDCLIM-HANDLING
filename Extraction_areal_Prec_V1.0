@@ -1,6 +1,6 @@
 ################################################################################
-#EXTRACTION OF PERCENTAGE ANOMALIES                                            #
-#FROM CMIP6 CLIMATE MODEL DATASETS USING A POLYGON IN SHAPEFILE                #
+#EXTRACTION OF PRECIPITATION AND ANOMALIES                                     #
+#FROM CMIP6 CLIMATE MODEL DATASETS USING A SINGLE POLYGON SHAPEFILE            #
 ################################################################################
 
 #Author: Julio Montenegro Gambini, P.E. ASCE, M.Sc.,
