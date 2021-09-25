@@ -191,9 +191,6 @@ PP_b<-full_join(PP_370,PP_585)
 PP_CanESM5<-full_join(PP_a,PP_b)
 rownames(PP_CanESM5)<-c("ssp126","ssp245","ssp370","ssp585")
 
-
-
-writeRaster()
 #CNRM-CM6-1=====================================================================
 #SSP126
 data_126_2021_2040<-stack("CNRM-CM6-1/_CNRM-CM6-1_ssp126_2021-2040.tif")
